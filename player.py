@@ -14,6 +14,21 @@ class Player:
         self.width = 50
         self.height = 50
         self.color = (0, 0, 255) # blue
+        self.level = 1
+        self.max_health = 100
+        self.eahlth = self.max_health
+        self.attack = 3
+        self.exp = 0
+        self.exp_to_next_level = 100
+        self.inventory = []
+
+    def level_up(self):
+        self.level += 1
+        self.max_health += 10
+        self.health = self.max_health
+        self.attack += 2
+        self.defense += 1
+        self.exp_to_next_level += 1.5
 
     def move(self, screen_width, screen_height):
             self.x += self.vel_x
